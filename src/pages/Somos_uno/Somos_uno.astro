@@ -1,0 +1,165 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+---
+
+<Layout title="MCI Madrid">
+	<main>
+		<header class="bg-black text-white py-2 md:py-4">
+				<div class="container mx-auto flex justify-between items-center">
+					<div>
+						<img class="h-8 md:h-10 ml-3" src="/img/MCI_logo_blanco.jpg" alt="Logo">
+						<!-- <a href="#" class="text-white text-xl font-bold">Mi Sitio Web</a> -->
+					</div>
+					<!-- Botón del menú hamburguesa -->
+					<div class="lg:hidden mr-3">
+						<button id="toggleMenu" class="text-white focus:outline-none focus:text-white">
+							<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
+								<path fill-rule="evenodd" d="M3 4.5a.5.5 0 1 1 0-1h14a.5.5 0 1 1 0 1H3zm0 5a.5.5 0 1 1 0-1h14a.5.5 0 1 1 0 1H3zm0 5a.5.5 0 1 1 0-1h14a.5.5 0 1 1 0 1H3z" />
+							</svg>
+						</button>
+					</div>
+					<!-- Menú de navegación -->
+					<nav class="hidden lg:block mx-4">
+						<ul class="flex space-x-4">
+							<li><a href="/" class="text-white">Inicio</a></li>
+							<li><a href="../Somos_uno/Somos_uno" class="text-white">Somos Uno</a></li>
+							<li><a href="../Mensaje/Mensaje" class="text-white">Mensaje</a></li>
+							<li><a href="../Oracion/Oracion" class="text-white">Oracion</a></li>
+							<li><a href="../Celula/Celula" class="text-white">Celula</a></li>
+							<li><a href="../Contacto/Contacto" class="text-white">Contacto</a></li>
+							<li><a href="../Tienda/Tienda" class="text-white">Tienda</a></li>
+						</ul>
+					</nav>
+				</div>
+		</header>
+		<!-- Menú de navegación para pantallas pequeñas -->
+		<nav id="mobileMenu" class="lg:hidden bg-gray-800 p-4" style="display: none;">
+			<ul class="space-y-4">
+				<li><a href="/" class="block text-white">Inicio</a></li>
+				<li><a href="../Somos_uno/Somos_uno" class="text-white">#Somos Uno</a></li>
+				<li><a href="../Mensaje/Mensaje" class="block text-white">Mensaje</a></li>
+				<li><a href="../Oracion/Oracion" class="text-white">Oracion</a></li>
+				<li><a href="../Celula/Celula" class="text-white">Celula</a></li>
+				<li><a href="../Contacto/Contacto" class="block text-white">Contacto</a></li>
+				<li><a href="../Tienda/Tienda" class="block text-white">Tienda</a></li>
+			</ul>
+		</nav>
+		<body>
+            <div class="text-5xl md:text-6xl fondo bg-cover bg-center flex flex-col items-center justify-center text-white transition duration-1000">
+                <!-- <div class="Bienvenida"> -->
+                    Proximamente .... <br>
+                    #SomosUno
+                <!-- </div> -->
+            </div>
+			
+		</body>
+	</main>
+</Layout>
+
+<style>
+	main {
+		/* margin: auto; */
+		/* padding: 1rem; */
+		width: 100%;
+		/* max-width: calc(100% - 2rem); */
+		/* color: rgb(0, 0, 0); */
+		font-size: 20px;
+		line-height: 1.6;
+	}
+
+	
+	.fondo {
+        background-size: cover;
+        background-attachment: fixed;
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        transition: background-image 1s ease-in-out;
+        background-position: center; /* Centra la imagen horizontalmente */
+    }
+
+
+	/* .astro-a {
+		position: absolute;
+		top: -32px;
+		left: 50%;
+		transform: translatex(-50%);
+		width: 220px;
+		height: auto;
+		z-index: -1;
+	} */
+	h1 {
+		font-size: 4rem;
+		font-weight: 700;
+		line-height: 1;
+		text-align: center;
+		margin-bottom: 1em;
+	}
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+	.instructions {
+		margin-bottom: 2rem;
+		border: 1px solid rgba(var(--accent-light), 25%);
+		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
+		padding: 1.5rem;
+		border-radius: 8px;
+	}
+	.instructions code {
+		font-size: 0.8em;
+		font-weight: bold;
+		background: rgba(var(--accent-light), 12%);
+		color: rgb(var(--accent-light));
+		border-radius: 4px;
+		padding: 0.3em 0.4em;
+	}
+	.instructions strong {
+		color: rgb(var(--accent-light));
+	}
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 2rem;
+		padding: 0;
+	}
+</style>
+
+<script>
+	// Menu hamburguesa
+	document.getElementById('toggleMenu').addEventListener('click', function () {
+		document.getElementById('mobileMenu').style.display = document.getElementById('mobileMenu').style.display === 'block' ? 'none' : 'block';
+	});
+	document.addEventListener("DOMContentLoaded", function () {
+    const imagenesFondo = [
+        '../../img/MCI.jpeg',
+        '../../img/MCI_Fondo.jpeg',
+        // Agrega más rutas según sea necesario
+    ];
+
+    let indexImagen = 0;
+	const fondoElement = document.querySelector('.fondo') as HTMLElement; //tipo typeScrip
+
+    function cambiarFondo() {
+        fondoElement.style.backgroundImage = `url('${imagenesFondo[indexImagen]}')`;
+
+        indexImagen = (indexImagen + 1) % imagenesFondo.length;
+    }
+
+    cambiarFondo(); // Cambia el fondo inicialmente
+
+    setInterval(cambiarFondo, 5000); // Cambia el fondo cada 5 segundos
+	});
+
+
+
+</script>

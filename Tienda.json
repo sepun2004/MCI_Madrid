@@ -1,0 +1,18 @@
+[
+    {
+        "img":"",
+        "nombre": "Juan",
+        "edad": 25,
+        "ciudad": "Ciudad de México"
+    },
+    {
+        "nombre": "Maríaaa",
+        "edad": 30,
+        "ciudad": "Madrid"
+    },
+    {
+        "nombre": "Luis",
+        "edad": 28,
+        "ciudad": "Buenos Aires"
+    }
+]
