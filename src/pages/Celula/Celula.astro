@@ -28,7 +28,7 @@ import Layout from '../../layouts/Layout.astro';
 							<li><a href="../Oracion/Oracion" class="text-white">Oracion</a></li>
 							<li><a href="../Celula/Celula" class="text-white">Celula</a></li>
 							<li><a href="../Contacto/Contacto" class="text-white">Contacto</a></li>
-							<li><a href="../Tienda/Tienda" class="text-white">Tienda</a></li>
+							<li><a href="https://sebas.4trastos.com/index.php" class="text-white">Tienda</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -42,7 +42,7 @@ import Layout from '../../layouts/Layout.astro';
 				<li><a href="../Oracion/Oracion" class="text-white">Oracion</a></li>
 				<li><a href="../Celula/Celula" class="text-white">Celula</a></li>
 				<li><a href="../Contacto/Contacto" class="block text-white">Contacto</a></li>
-				<li><a href="../Tienda/Tienda" class="block text-white">Tienda</a></li>
+				<li><a href="https://sebas.4trastos.com/index.php" class="text-white">Tienda</a></li>
 			</ul>
 		</nav>
 		<body>
@@ -76,35 +76,36 @@ import Layout from '../../layouts/Layout.astro';
 					</div>
 				</div>
             </div>
-            <!-- <div class=""> -->
-                <!-- <div class="grid grid-cols-12 m-4"> -->
-					
-					<!-- <div class="bg-black py-5">
-						<div class="w-full md:w-auto mb-3">
-							<iframe src="https://www.youtube.com/embed/0Fxn21WFMs0" allowfullscreen style="margin-left: auto; margin-right: auto; display: block;"></iframe>
-						</div>
-					<div class="text-center text-white">
-						<div class="mb-4">
-							<label for="text" class="font-semibold">Nombre:</label>
-							<input type="text" name="nombre" class=" py-2 px-4 w-1/2" placeholder="Nombre">
-						</div>
-						<div class="mb-4">
-							<label for="text" class="font-semibold">Apellido:</label>
-							<input type="text" name="apellidos" class="py-2 px-4 w-1/2" placeholder="Apellido">
-						</div>
-						<div class="mb-4">
-							<label for="number" class="font-semibold">Teléfono</label>
-							<input type="text" name="telefono" class="py-2 px-4 w-1/2" placeholder="Teléfono">
-						</div>
-						<div>
-							<label for="exampleFormControlTextarea1" class="mb-4 block font-semibold">Petición de Oración</label>
-							<textarea name="mensaje" class="py-2 px-4 w-auto" id="exampleFormControlTextarea1" rows="5" placeholder="Mensaje"></textarea>
-						</div>
-							<button type="submit" class="bg-yellow-500  text-white font-bold py-2 px-4 ">Enviar</button>
-						</div>
-					</div> -->
-                <!-- </div> -->
-            <!-- </div> -->
+
+			
+			<div class="mb-5 flex items-center justify-center m-5">
+				<div id="custom-slider" class=" ">
+                	<input type="radio" name="slider" id="item-1" checked>
+                	<input type="radio" name="slider" id="item-2">
+                	<input type="radio" name="slider" id="item-3">
+					<div class="container slider-cards">
+						<label class="w-2/4 lg:w-2/6 slider-card" for="item-1" id="img-1">
+							<div class=" p-4 bg-gray-200 rounded-lg shadow-md">
+								<p class="text-base font-semibold mb-2">¿Qué es una célula?</p>
+								<p class="text-sm">Una célula es un grupo de personas que se reúnen regularmente para estudiar la Biblia, orar, compartir experiencias y apoyarse mutuamente en su caminar espiritual.</p>
+							</div>
+						</label>
+						<label class="w-2/4 lg:w-2/6 slider-card" for="item-2" id="img-2">
+							<div class="p-4 bg-gray-200 rounded-lg shadow-md">
+								<p class="text-base font-semibold mb-2">¿Cuál es el objetivo de la célula?</p>
+								<p class="text-sm">El objetivo principal de una célula es crecer espiritualmente, fortalecer las relaciones entre los miembros y alcanzar a otras personas con el mensaje del evangelio.</p>
+							</div>
+						</label>
+						<label class="w-2/4 lg:w-2/6 slider-card" for="item-3" id="img-3">
+							<div class="p-4 bg-gray-200 rounded-lg shadow-md">
+								<p class="text-xl font-semibold mb-2">¿Qué hacen en una célula?</p>
+								<p class="text-sm">En una célula, las personas pueden participar en actividades como estudiar la Biblia, compartir testimonios, orar unos por otros, y planificar proyectos de servicio comunitario.</p>
+							</div>
+						</label>
+						
+					</div>
+            	</div>
+			</div>
 			
 		</body>
 	</main>
@@ -112,13 +113,8 @@ import Layout from '../../layouts/Layout.astro';
 
 <style>
 	main {
-		/* margin: auto; */
-		/* padding: 1rem; */
 		width: 100%;
-		/* max-width: calc(100% - 2rem); */
-		/* color: rgb(0, 0, 0); */
 		font-size: 20px;
-		line-height: 1.6;
 	}
 
 	
@@ -137,18 +133,13 @@ import Layout from '../../layouts/Layout.astro';
         background-position: center; /* Centra la imagen horizontalmente */
     }
 
-
-
-	
-	/* .astro-a {
-		position: absolute;
-		top: -32px;
-		left: 50%;
-		transform: translatex(-50%);
-		width: 220px;
-		height: auto;
-		z-index: -1;
-	} */
+	.fade-in {
+ 		 opacity: 0;
+  		transition: opacity 1s ease-in-out;
+	}
+	.fade-in.visible {
+  		opacity: 1;
+	}
 	h1 {
 		font-size: 4rem;
 		font-weight: 700;
@@ -156,37 +147,49 @@ import Layout from '../../layouts/Layout.astro';
 		text-align: center;
 		margin-bottom: 1em;
 	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
+
+
+
+
+	/* informacion celula */
+
+	#custom-slider .slider-card {
+		position: absolute;
+		left: 0;
+		right: 0;
+		margin: auto;
+		transition: transform .4s ease;
 	}
-	.instructions {
-		margin-bottom: 2rem;
-		border: 1px solid rgba(var(--accent-light), 25%);
-		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
-		padding: 1.5rem;
-		border-radius: 8px;
+
+	#custom-slider input[type=radio] {
+		display: none;
 	}
-	.instructions code {
-		font-size: 0.8em;
-		font-weight: bold;
-		background: rgba(var(--accent-light), 12%);
-		color: rgb(var(--accent-light));
-		border-radius: 4px;
-		padding: 0.3em 0.4em;
+
+	#custom-slider #item-1:checked ~ .slider-cards #img-3,
+	#custom-slider #item-2:checked ~ .slider-cards #img-1,
+	#custom-slider #item-3:checked ~ .slider-cards #img-2 {
+		transform: translateX(-40%) scale(0.8);
+		opacity: 0.4;
+		z-index: 0;
 	}
-	.instructions strong {
-		color: rgb(var(--accent-light));
+
+	#custom-slider #item-1:checked ~ .slider-cards #img-2,
+	#custom-slider #item-2:checked ~ .slider-cards #img-3,
+	#custom-slider #item-3:checked ~ .slider-cards #img-1 {
+		transform: translateX(40%) scale(0.8);
+		opacity: 0.4;
+		z-index: 0;
 	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 2rem;
-		padding: 0;
+
+	#custom-slider #item-1:checked ~ .slider-cards #img-1,
+	#custom-slider #item-2:checked ~ .slider-cards #img-2,
+	#custom-slider #item-3:checked ~ .slider-cards #img-3 {
+		transform: translateX(0) scale(1);
+		opacity: 1;
+		z-index: 1;
 	}
+
+
 </style>
 
 <script>
@@ -213,6 +216,20 @@ import Layout from '../../layouts/Layout.astro';
     cambiarFondo(); // Cambia el fondo inicialmente
 
     setInterval(cambiarFondo, 5000); // Cambia el fondo cada 5 segundos
+	});
+
+	window.addEventListener('scroll', function() {
+	var fadeElements = document.querySelectorAll('.fade-in');
+	fadeElements.forEach(function(element) {
+		var elementPosition = element.getBoundingClientRect().top;
+		var screenPosition = window.innerHeight / 1.5;
+
+		if (elementPosition < screenPosition && elementPosition > -element.clientHeight) {
+		element.classList.add('visible');
+		} else {
+		element.classList.remove('visible');
+		}
+	});
 	});
 
 

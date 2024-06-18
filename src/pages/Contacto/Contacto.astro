@@ -28,7 +28,7 @@ import Layout from '../../layouts/Layout.astro';
 							<li><a href="../Oracion/Oracion" class="text-white">Oracion</a></li>
 							<li><a href="../Celula/Celula" class="text-white">Celula</a></li>
 							<li><a href="../Contacto/Contacto" class="text-white">Contacto</a></li>
-							<li><a href="../Tienda/Tienda" class="text-white">Tienda</a></li>
+							<li><a href="https://sebas.4trastos.com/index.php" class="text-white">Tienda</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -42,35 +42,37 @@ import Layout from '../../layouts/Layout.astro';
 				<li><a href="../Oracion/Oracion" class="text-white">Oracion</a></li>
 				<li><a href="../Celula/Celula" class="text-white">Celula</a></li>
 				<li><a href="../Contacto/Contacto" class="block text-white">Contacto</a></li>
-				<li><a href="../Tienda/Tienda" class="block text-white">Tienda</a></li>
+				<li><a href="https://sebas.4trastos.com/index.php" class="text-white">Tienda</a></li>
 			</ul>
 		</nav>
 		<body>
             <div class="fondo transition duration-1000">
-				<div class="grid m-8">
-					<div class="col-span-12">
-					</div>
-					<div class="col-span-12 m-4 md:col-span-6 flex items-center max-w-full">
+				<div class="md:flex p-6 bg-black ">
+					<div class="w-full lg:w-1/2">
 						<img src="/img/Contacto.png" alt="Imagen mediana" />
 					</div>
-					<div class="col-span-12 md:col-span-6 flex items-center text-gray-50 ">
-						<p>Ubicación de la iglesia<br>
-							Nos encontramos en Madrid Capital. En Calle Miguel Yuste 60, en el barrio de San Blas.<br>
-							<br>
-							Transporte público:<br>
-							- Metro disponible con la línea 7 y 5<br>
-							- Parking gratuito<br>
-							<br>
-							Calle Miguel Yuste 60,<br>
-							28037 Madrid<br>
-							Metro: L7 García Noblejas o L5 Suanzes<br>
-							Madrid.es@mci12.com<br>
-							+34 673978765</p>
+					<div class="w-full text-white">
+						<p class="text-2xl text-color-0173EA font-bold lg:text-5xl">Ubicación MCI</p>
+						<p class="text-xs lg:text-2xl">
+							Nos encontramos en Madrid Capital. En Calle Miguel Yuste 60, en el barrio de San Blas.&nbsp; <br>
+							Transporte público: <br>
+							- Metro disponible con la linea 7 y 5 <br>
+							- Parking gratuito <br>
+							Calle Miguel Yuste 60, <br>
+							28037 Madrid <br>
+							Metro: L7 García Noblejas o L5 Suanzes </p>
+						<iframe class="m-5 lg:hidden" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6073.659270641154!2d-3.6257404243027658!3d40.434771154541664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd422f753f6e2387%3A0x46135770815b974f!2sC.%20de%20Miguel%20Yuste%2C%2060%2C%20San%20Blas-Canillejas%2C%2028037%20Madrid!5e0!3m2!1ses!2ses!4v1714240531069!5m2!1ses!2ses"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+						 </iframe>
+						 <iframe class="m-5 hidden lg:block"src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6073.659270641271!2d-3.6257404234747423!3d40.434771154540364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd422f753f6e2387%3A0x46135770815b974f!2sC.%20de%20Miguel%20Yuste%2C%2060%2C%20San%20Blas-Canillejas%2C%2028037%20Madrid!5e0!3m2!1ses!2ses!4v1714241798630!5m2!1ses!2ses" width="700" height="190" 	allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 					</div>
+
 				</div>
+				
 			</div>
 			
-			
+			<!-- <div class="fondo">
+			</div>
+			 -->
 			
 		</body>
 	</main>
@@ -86,7 +88,9 @@ import Layout from '../../layouts/Layout.astro';
 		font-size: 20px;
 		line-height: 1.6;
 	}
-
+	.text-color-0173EA{
+		color: #0173EA;
+	}
 	
 	.fondo {
         background-size: cover;
